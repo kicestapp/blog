@@ -138,20 +138,14 @@ export default function Index(
 					) : null}
 
 					{publication.about?.html ? (
-						<div
-							className="blog-author-container border-b dark:border-slate-800"
-						>
+						<div className="blog-author-container border-b dark:border-slate-800">
 							<div
 								className={twJoin(
 									'blog-author-area feed-width mx-auto md:w-3/4 lg:w-2/3',
 									preferences.layout === 'grid' ? '' : 'px-4 lg:px-8',
 								)}
 							>
-								<PublicationMeta
-									author={author}
-									aboutHTML={publication.about.html}
-									isTeam={publication.isTeam}
-								/>
+								<PublicationMeta author={author} aboutHTML={publication.about.html} isTeam={true} />
 							</div>
 						</div>
 					) : null}
@@ -182,12 +176,7 @@ export default function Index(
 				</div>
 				{publication ? (
 					<PublicationFooter
-						authorName={publication.author.name}
-						title={publication.title}
-						imprint={publication.imprint}
-						disableFooterBranding={publication.preferences.disableFooterBranding}
-						isTeam={publication.isTeam}
-						logo={publication.preferences.logo}
+						logo={publication.preferences.logo!}
 						darkMode={publication.preferences.darkMode}
 					/>
 				) : null}

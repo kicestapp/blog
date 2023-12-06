@@ -129,14 +129,9 @@ export default function Series({ series, publication, posts, seriesSlug, current
 					</div>
 				</div>
 				<PublicationFooter
-					authorName={publication.author.name}
-					title={publication.title}
-					imprint={publication.imprint}
-					disableFooterBranding={publication.preferences.disableFooterBranding}
-					isTeam={publication.isTeam}
-					logo={publication.preferences.logo}
-					darkMode={publication.preferences.darkMode}
-				/>
+						logo={publication.preferences.logo!}
+						darkMode={publication.preferences.darkMode}
+					/>
 			</Layout>
 		</AppProvider>
 	);
